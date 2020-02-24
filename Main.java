@@ -1,6 +1,8 @@
 /**
  * @author Walter Saldaña #19897
  * @author Laura Tamath   #19365
+*@since 4/02/2020
+ *@version 24/02/2020
  * 
  * Universidad del Valle de Guatemala
  * Algoritmos y Estructuras de Datos

@@ -1,6 +1,8 @@
 /**
  * @author Walter Saldaña
  * @author Laura Tamath
+ *@since 4/02/2020
+ *@version 24/02/2020
  * 
  * Intefaz que posee las operaciones que esta calculadora puede ejecutar
  * Se vincula al último nodo de la colección. 

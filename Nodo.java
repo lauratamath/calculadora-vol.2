@@ -1,50 +1,69 @@
 /**
-*@author: Laura Tamath
-*@author: Walter Saldana
-*@since 24/02/2020
-*@version 25/02/2020
-Referencia tomada del código de Douglas
-**/
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ *@since 24/02/2020
+ *@version 25/02/2020
+ * 
+ * Variación de un nodo simple, difiriendo en la dirección del vector:
+ * Cada nodo apunta al nodo que lo antecede (inverso a un nodo común). 
+ */
 
 public class Nodo<E>{
-   protected E data; // Valor almacenado
-   protected Nodo<E> nextElement; // refiere al siguiente
+   //Atributos de clase
+   protected E data; // Valor que se almacena en este nodo
+   protected Nodo<E> prevElement; // Refiere al nodo anterior
 
-   public Nodo(E v, Nodo<E> next)
-   // pre: v es un valor, el siguiente es una referencia a resto de la lista
-   // post: un elemento se construye como el nuevo
-   {
+
+   /**
+    * @param v      valor del elemento del nodo
+    * @param prev   referencia al nodo anterior
+    * Se construye un nuevo nodo como la cola de la lista
+    */
+   public Nodo(E v, Nodo<E> prev){
        data = v;
-       nextElement = next;
+       prevElement = prev;
    }
 
-   public Nodo(E v)
-   // post: construye una nueva cola de una lista con valor v
-   {
+
+   /**
+    * @param v   valor del elemento del nodo
+    * Construye un nuevo nodo en la cabeza de la lista
+    */
+   public Nodo(E v){
       this(v,null);
    }
 
-   public Nodo<E> next()
-   // post: devuelve la referencia al siguiente valor en la lista
-   {
-      return nextElement;
+
+   /**
+    * @return Referencia al nodo anterior
+    */
+   public Nodo<E> prev(){
+      return prevElement;
    }
 
-   public void setNext(Nodo<E> next)
-   // post: establece referencia al nuevo valor siguiente
-   {
-      nextElement = next;
+
+   /**
+    * @param prev  El nodo en posición anterior en la lista
+    * Establece el nodo que antecede a este
+    */
+   public void setPrev(Nodo<E> prev){
+      prevElement = prev;
    }
 
-   public E value()
-   // post: devuelve el valor asociado con este elemento
-   {
+
+   /**
+    * @return Valor del elemento de este nodo
+    */
+   public E value(){
       return data;
    }
 
-   public void setValue(E value)
-   // post: establece el valor asociado con este elemento
-   {
+
+   /**
+    * @param value  Elemento asociado al tipo de dato de la lista
+    * Asigna el valor del elemento asociado a este nodo
+    */
+   public void setValue(E value){
       data = value;
    }
 }

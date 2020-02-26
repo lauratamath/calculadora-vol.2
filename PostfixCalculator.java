@@ -1,9 +1,8 @@
 /**
  * @author Walter Saldaña
  * @author Laura Tamath
- *@since 4/02/2020
- *@version 24/02/2020
- * 
+ *@since 24/02/2020
+ *@version 25/02/2020
  * Clase que realiza operaciones tipo postfix
  */
 

@@ -5,7 +5,7 @@
 *@version 25/02/2020
 **/
 
-public abstract class AbstractList<E> implements Lista<E>, Pila<E>{
+public abstract class AbstractList<E> implements List<E>, Pila<E>{
 
     protected int count;
 

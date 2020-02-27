@@ -1,21 +1,23 @@
 /**
-*@author: Laura Tamath
-*@author: Walter Saldana
-*@since 24/02/2020
-*@version 25/02/2020
-**/
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
+ * Referencias: 
+ * https://www.journaldev.com/1377/java-singleton-design-pattern-best-practices-examples
+ */
+
 public class Singleton{
 
-	private static Singleton obj; 
+	private static PostfixCalculator obj; 
   
-    // private constructor to force use of 
-    // getInstance() to create Singleton object 
+    // Constructor privado forza el uso de
+    // getInstance() para crear objeto singleton
     private Singleton() {} 
   
-    public static Singleton getInstance() 
+    public static PostfixCalculator getInstance(String postfix) 
     { 
         if (obj==null) 
-            obj = new Singleton(); 
+            obj = new PostfixCalculator(postfix); 
         return obj; 
     } 
 }

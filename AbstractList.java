@@ -1,6 +1,13 @@
+/**
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
+ * Referencias: 
+ * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
+ */
 public abstract class AbstractList<E>
        implements List<E>{
-           
+
    public AbstractList()
    // post: does nothing
    {

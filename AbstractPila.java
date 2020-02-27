@@ -1,9 +1,11 @@
 /**
-*@author: Laura Tamath
-*@author: Walter Saldana
-*@since 24/02/2020
-*@version 25/02/2020
-**/
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
+ * Referencias: 
+ * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
+ */
+
 public abstract class AbstractPila<E> implements Pila<E>{
 
     @Override

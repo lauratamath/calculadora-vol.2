@@ -1,3 +1,10 @@
+/**
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
+ * Referencias: 
+ * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
+ */
 public class DoublyLinkedList<E> extends AbstractList<E> {
     protected int count;
     protected DoublyLinkedNode<E> head;
@@ -103,7 +110,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
     @Override
     public E remove() {
          DoublyLinkedNode<E> t = tail;
-         tail = tail.getPrevious();
+         tail = tail.previousElement;
          if(head == tail){
 			head = null;
 		}else {

@@ -1,3 +1,10 @@
+/**
+ * @author Walter Saldaña
+ * @author Laura Tamath
+ * 
+ * Referencias: 
+ * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
+ */
 public class DoublyLinkedNode<E>{
     protected E data;
     protected DoublyLinkedNode<E> nextElement;
@@ -34,7 +41,4 @@ public class DoublyLinkedNode<E>{
         return this.data;
     }
 
-    public DobleNode<E> getPrevious(){
-        return previousElement;
-    }
 }

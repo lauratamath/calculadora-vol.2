@@ -93,8 +93,19 @@ public class SinglyLinkedList<E> extends AbstractList<E>
 
    @Override
    public E removeLast() {
-       // TODO Auto-generated method stub
-       return null;
+      Node<E> next = head;
+      Node<E> previous = null ;
+      while(next.next() != null){
+        previous = next;
+        next = next.next();
+      } if(previous == null){
+          head = null;
+      }else{
+        previous.setNext(null);
+      }count--;
+      return next.value();
+
+
    }
 
    @Override
@@ -106,7 +117,8 @@ public class SinglyLinkedList<E> extends AbstractList<E>
    @Override
    public void add(E value) {
        // TODO Auto-generated method stub
-
+      head = new Node<E>(value, head);
+      count ++;
    }
 
    @Override

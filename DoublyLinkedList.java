@@ -53,8 +53,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        return 0;
+        return count;
     }
 
     @Override
@@ -71,8 +70,7 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 
     @Override
     public E getLast() {
-        // TODO Auto-generated method stub
-        return null;
+        return tail.value();
     }
 
     @Override
@@ -88,15 +86,31 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
     }
 
     @Override
+    /**
+	 * Se encarga de agregar un dato al final de la lista
+	 * post: se agrega un nuevo elemento a la lista
+	 */
     public void add(E value) {
-        // TODO Auto-generated method stub
-
+        if(count ==0 ){
+        	head = new DoublyLinkedNode<E>(value, head, null);
+        	if(tail == null) tail =  head;
+        }else{
+        	tail = new DoublyLinkedNode<E>(value, null, tail);
+        	if(head == null) head = tail;
+        }count ++;
     }
 
     @Override
     public E remove() {
-        // TODO Auto-generated method stub
-        return null;
+         DoublyLinkedNode<E> t = tail;
+         tail = tail.getPrevious();
+         if(head == tail){
+			head = null;
+		}else {
+			tail.setNext(null);
+		}
+		count--;
+		return t.data;
     }
 
     @Override

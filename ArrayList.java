@@ -5,7 +5,7 @@
 *@version 25/02/2020
 **/
 import java.util.ArrayList;
-public class ArrayList<E> extends AbstractPila<E>{
+public class Arraylist<E> extends AbstractPila<E>{
 
     protected ArrayList<E> pila;
     /**

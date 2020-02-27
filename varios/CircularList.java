@@ -7,20 +7,20 @@ Referencia tomada del código de Douglas
 **/
 public class CircularList<E> extends AbstractList<E>{
 
-	protected Node<E> tail; 
+	protected Nodo<E> tail; 
 	protected int count;
 
 	public CircularList()
 	/*pre: construye una nueva lista circular*/
 	{
-	   tail = null;
+	   this.tail = null;
 	   count = 0;
 	}
 
 	public void addFirst(E value){
 	/* pre: valor no nulo
 	  post: agrega elemento al encabezado de la lista */
-	   Node<E> temp = new Node<E>(value);
+	   Nodo<E> temp = new Nodo<E>(value);
 	   if (tail == null) { // primer valor agregado
 	       tail = temp;
 	       tail.setNext(tail);
@@ -46,12 +46,12 @@ public class CircularList<E> extends AbstractList<E>{
 	/* pre:! isEmpty ()
 	post: devuelve y elimina el valor de la cola de la lista*/
 	{
-	   Node<E> finger = tail;
+	   Nodo<E> finger = tail;
 	   while (finger.next() != tail) {
 	       finger = finger.next();
 	   }
 	   /*el dedo ahora apunta al penúltimo valor*/
-	   Node<E> temp = tail;
+	   Nodo<E> temp = tail;
 	   if (finger == tail)
 	   {
 	       tail = null;

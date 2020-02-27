@@ -11,17 +11,17 @@
 public class Nodo<E>{
    //Atributos de clase
    protected E data; // Valor que se almacena en este nodo
-   protected Nodo<E> prevElement; // Refiere al nodo anterior
+   protected Nodo<E> nextElement; // Refiere al nodo anterior
 
 
    /**
     * @param v      valor del elemento del nodo
-    * @param prev   referencia al nodo anterior
+    * @param next   referencia al nodo anterior
     * Se construye un nuevo nodo como la cola de la lista
     */
-   public Nodo(E v, Nodo<E> prev){
+   public Nodo(E v, Nodo<E> next){
        data = v;
-       prevElement = prev;
+       nextElement = next;
    }
 
 
@@ -37,17 +37,17 @@ public class Nodo<E>{
    /**
     * @return Referencia al nodo anterior
     */
-   public Nodo<E> prev(){
-      return prevElement;
+   public Nodo<E> next(){
+      return nextElement;
    }
 
 
    /**
-    * @param prev  El nodo en posición anterior en la lista
+    * @param next  El nodo en posición anterior en la lista
     * Establece el nodo que antecede a este
     */
-   public void setPrev(Nodo<E> prev){
-      prevElement = prev;
+   public void setNext(Nodo<E> next){
+      nextElement = next;
    }
 
 

@@ -10,13 +10,15 @@
  * Programa que realiza cálculos en formato Postfix.
  * Se ingresa un documento de texto txt con una operación Postfix 
  * y se retorna el resultado numérico.
+ * 
+ * Referencias: 
+ * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
  */
 
 //Importación de clases
 import java.util.Scanner; //Leer la entrada de texto
 import java.io.File; //Representa un archivo 
 import java.io.*; //Intento fallido al abrir un archivo
-import java.awt.*;
 
 
 public class Main{

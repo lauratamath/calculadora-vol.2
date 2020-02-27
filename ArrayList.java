@@ -5,14 +5,15 @@
 *@version 25/02/2020
 **/
 import java.util.ArrayList;
-public class ArrayList<E> extends AbstractPila<E> implements Pila<E> {
+public class ArrayList<E> extends AbstractPila<E>{
 
-    protected ArrayList<E> pila = new ArrayList<E>();
+    protected ArrayList<E> pila;
     /**
 	* Sin importar los elementos, agrega un dato a la pila 
 	* post: se le agrega dicho elemento
 	*/
     public void add (E value) {
+		pila =  new ArrayList<E>();
     	pila.add(value);
     }
     /**

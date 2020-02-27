@@ -1,10 +1,10 @@
-class Factory<E> {
+public class Factory<E> {
     //selecciona la implementacion a utilizar para un stack
     //se utiliza el patron Factory
        public Pila<E> getStack(String entry) {
         // seleccion de la implementacion a utilizar:
         if (entry.equals("AL"))
-          return new Arraylist()<E>; //regresa ArrayList
+          return new Arraylist<E>(); //regresa ArrayList
         else
           return new VectorS<E>(); //regresa Vector
        }
@@ -15,7 +15,7 @@ class Factory<E> {
            }else if(entry.equals("DO")){
                return new DoublyLinkedList<E>();
           }else{
-            return new CircularList()<E>;
+            return new CircularList<E>();
           }
        }
     }

@@ -5,6 +5,7 @@
  * Referencias: 
  * Duane A. Bailey. (2007). Java Structures. 7ma edicion.
  */
+
 public class SinglyLinkedList<E> extends AbstractList<E>
 {
 
@@ -94,8 +95,15 @@ public class SinglyLinkedList<E> extends AbstractList<E>
 
    @Override
    public E getLast() {
-       // TODO Auto-generated method stub
-       return null;
+       Node<E> next = head;
+       Node<E> previous = null ;
+
+        while(next.next() != null){
+          previous = next;
+          next = next.next();
+        }if (previous == null){
+          head = null;
+        } return next.value();
    }
 
    @Override
@@ -111,8 +119,6 @@ public class SinglyLinkedList<E> extends AbstractList<E>
         previous.setNext(null);
       }count--;
       return next.value();
-
-
    }
 
    @Override

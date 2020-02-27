@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class DoublyLinkedList<E> extends AbstractList<E> {
     protected int count;
     protected DoublyLinkedNode<E> head;
@@ -139,12 +137,6 @@ public class DoublyLinkedList<E> extends AbstractList<E> {
 
     @Override
     public E remove(int i) {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public Iterator<E> iterator() {
         // TODO Auto-generated method stub
         return null;
     }

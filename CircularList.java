@@ -103,7 +103,7 @@ public class CircularList<E> extends AbstractList<E>{
 
     @Override
     public void add(E value) {
-        
+
     }
 
     @Override
@@ -147,8 +147,4 @@ public class CircularList<E> extends AbstractList<E>{
         return null;
     }
 
-    @Override
-    public Iterator<E> iterator() {
-        return null;
-    }
 }

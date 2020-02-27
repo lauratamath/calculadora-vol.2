@@ -157,9 +157,4 @@ public class SinglyLinkedList<E> extends AbstractList<E>
        return null;
    }
 
-    @Override
-    public Iterator<E> iterator() {
-        // TODO Auto-generated method stub
-        return null;
-    }
 }

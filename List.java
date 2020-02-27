@@ -79,7 +79,4 @@ public interface List<E>
    // pre: 0 <= i < size()
    // post: removes and returns object found at that location
 
-   public Iterator<E> iterator();
-   // post: returns an iterator allowing
-   // ordered traversal of elements in list
 }

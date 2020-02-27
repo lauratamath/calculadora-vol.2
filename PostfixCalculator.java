@@ -8,7 +8,7 @@
 
 public class PostfixCalculator{
     //Atributos de clase
-    private Vector<Integer> vector;
+    private Pila<Integer> vector;
     private String postfix;
 
     /**
@@ -17,7 +17,8 @@ public class PostfixCalculator{
      * @param postfix  Operación postfix a realizar
      */
     public PostfixCalculator(String postfix){
-        this.vector = new Vector<Integer>();
+        Factory<Integer> factory = new Factory<Integer>();
+        this.vector = factory.getStack("V");
         this.postfix = postfix;
     }
 
@@ -26,7 +27,7 @@ public class PostfixCalculator{
      * sin parámetros
      */
     public PostfixCalculator(){
-        this.vector = new Vector<Integer>();
+        
     }
 
     /**
@@ -37,8 +38,8 @@ public class PostfixCalculator{
         String[] valores = this.getPostfix().split(" ");
         for(int i=0; i<valores.length; i++){
             if(valores[i].equals("+") || valores[i].equals("-") || valores[i].equals("*") || valores[i].equals("/")){
-                int a = vector.pop();
-                int b = vector.pop();
+                int a = vector.remove();
+                int b = vector.remove();
                 int c = 0;
                 switch (valores[i]) {
                     case "+":
@@ -56,9 +57,9 @@ public class PostfixCalculator{
                     default:
                         break;
                 }
-                vector.push(c);
+                vector.add(c);
             }else{
-                vector.push(Integer.parseInt(valores[i]));
+                vector.add(Integer.parseInt(valores[i]));
             }
         }
         return vector.peek();
@@ -69,7 +70,7 @@ public class PostfixCalculator{
         this.postfix = postfix;
     }
 
-    public void setVector(Vector<Integer> vector){
+    public void setVectorS(Pila<Integer> vector){
         this.vector = vector;
     }
 
@@ -77,12 +78,12 @@ public class PostfixCalculator{
         return this.postfix;
     }
 
-    public Vector<Integer> getVector(){
+    public Pila<Integer> getVectorS(){
         return this.vector;
     }
 
     //Método toString
     public String toString(){
-        return "Postfix: "+this.getPostfix()+", Vector: "+this.getVector().toString();
+        return "Postfix: "+this.getPostfix()+", VectorS: "+this.getVectorS().toString();
     }
 }

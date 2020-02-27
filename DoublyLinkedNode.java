@@ -33,4 +33,8 @@ public class DoublyLinkedNode<E>{
     public E value(){
         return this.data;
     }
+
+    public DobleNode<E> getPrevious(){
+        return previousElement;
+    }
 }

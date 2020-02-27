@@ -1,3 +1,11 @@
+/**
+*@author: Laura Tamath
+*@author: Walter Saldana
+*@since 24/02/2020
+*@version 25/02/2020
+**/
+
+
 public class SinglyLinkedList<E> extends AbstractList<E>
 {
 
@@ -87,8 +95,15 @@ public class SinglyLinkedList<E> extends AbstractList<E>
 
    @Override
    public E getLast() {
-       // TODO Auto-generated method stub
-       return null;
+       Node<E> next = head;
+       Node<E> previous = null ;
+
+        while(next.next() != null){
+          previous = next;
+          next = next.next();
+        }if (previous == null){
+          head = null;
+        } return next.value()
    }
 
    @Override
@@ -104,8 +119,6 @@ public class SinglyLinkedList<E> extends AbstractList<E>
         previous.setNext(null);
       }count--;
       return next.value();
-
-
    }
 
    @Override

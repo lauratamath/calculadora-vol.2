@@ -103,12 +103,27 @@ public class CircularList<E> extends AbstractList<E>{
 
     @Override
     public void add(E value) {
-        
+        addFirst(value);
+        tail = tail.next();
     }
 
     @Override
     public E remove() {
-        return null;
+        Node<E> f = tail;
+       while (f.next() != tail) {
+           f = f.next();
+       }
+       // finger now points to second-to-last value
+       Node<E> t = tail;
+       if (f == tail)
+       {
+           tail = null;
+       } else {
+           f.setNext(tail.next());
+           tail = f;
+       }
+       count--;
+       return t.value();
     }
 
     @Override
